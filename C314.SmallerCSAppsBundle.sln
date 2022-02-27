@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C314.SmallerCSAppsBundle", "C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle.csproj", "{A92F8958-02C8-422D-A3BE-90D8F312AE8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C314.SmallerCSAppsBundle.GetMCServer", "C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj", "{64940A73-4058-4279-BEB3-3EA2CC99ECFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A92F8958-02C8-422D-A3BE-90D8F312AE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92F8958-02C8-422D-A3BE-90D8F312AE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92F8958-02C8-422D-A3BE-90D8F312AE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92F8958-02C8-422D-A3BE-90D8F312AE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F9C0067-F0CB-48F7-8FB3-5D4F26A06CBF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPublishable>True</IsPublishable>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj" />
+  </ItemGroup>
+
+</Project>
