@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj" />
-    <ProjectReference Include="..\ProjOne\ProjOne.csproj" />
+    <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
   </ItemGroup>
 
 </Project>
