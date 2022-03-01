@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C314.SmallerCSAppsBundle", "C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle.csproj", "{A92F8958-02C8-422D-A3BE-90D8F312AE8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle", "C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle.csproj", "{A92F8958-02C8-422D-A3BE-90D8F312AE8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C314.SmallerCSAppsBundle.GetMCServer", "C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj", "{64940A73-4058-4279-BEB3-3EA2CC99ECFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle.GetMCServer", "C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj", "{64940A73-4058-4279-BEB3-3EA2CC99ECFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjOne", "ProjOne\ProjOne.csproj", "{0EB76C20-675C-4240-B335-AC218BC7C773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64940A73-4058-4279-BEB3-3EA2CC99ECFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB76C20-675C-4240-B335-AC218BC7C773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB76C20-675C-4240-B335-AC218BC7C773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB76C20-675C-4240-B335-AC218BC7C773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB76C20-675C-4240-B335-AC218BC7C773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
