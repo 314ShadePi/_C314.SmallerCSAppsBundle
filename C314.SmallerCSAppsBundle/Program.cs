@@ -32,7 +32,7 @@ switch (ChosenProject.Key.ToString())
         Console.WriteLine();
         if (Confirm.Key.ToString() == "Escape")
         {
-            Console.WriteLine("Cancelled");
+            Console.WriteLine("CCancelled");
             goto Start;
         }
         Console.WriteLine("Confirmed");

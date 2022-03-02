@@ -34,17 +34,10 @@ namespace C314.SmallerCSAppsBundle.ProjOne
                 }
                 Console.Write(" -> ");
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Control) != 0) Console.Write("CTRL+");
-                if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Shift) != 0) Console.Write("SHIFT+");
+                if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
             } while (run);
         }
-
-        /*
-        public ConsoleKeyInfo GetKeyWithAdditionalInfo()
-        {
-            return Console.ReadKey();
-        }
-        */
     }
 }
