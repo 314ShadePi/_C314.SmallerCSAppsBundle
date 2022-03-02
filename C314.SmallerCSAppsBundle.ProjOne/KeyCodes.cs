@@ -39,5 +39,12 @@ namespace C314.SmallerCSAppsBundle.ProjOne
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
             } while (run);
         }
+
+        /*
+        public ConsoleKeyInfo GetKeyWithAdditionalInfo()
+        {
+            return Console.ReadKey();
+        }
+        */
     }
 }
