@@ -13,7 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\C314.SmallerCSAppsBundle.GetMCServer\C314.SmallerCSAppsBundle.GetMCServer.csproj" />
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
   </ItemGroup>
 
