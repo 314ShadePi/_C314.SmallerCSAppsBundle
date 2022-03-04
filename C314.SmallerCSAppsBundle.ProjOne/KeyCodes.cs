@@ -10,7 +10,6 @@ namespace C314.SmallerCSAppsBundle.ProjOne
     {
         public static void KeyCodesMain()
         {
-            bool run = true;
             Console.TreatControlCAsInput = true;
             Console.Title = "Input Viewer";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -20,24 +19,12 @@ namespace C314.SmallerCSAppsBundle.ProjOne
             do
             {
                 consoleKeyInfo = Console.ReadKey();
-                if (consoleKeyInfo.Key == ConsoleKey.Escape)
-                {
-                    Console.Write("\nAre you sure you want to exit? [y]Yes, [n]No: ");
-                    ConsoleKeyInfo Confirm = Console.ReadKey();
-                    if (Confirm.Key.ToString() == "Y")
-                    {
-                        run = false;
-                        Console.WriteLine();
-                        return;
-                    }
-                    Console.WriteLine();
-                }
                 Console.Write(" -> ");
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Control) != 0) Console.Write("CTRL+");
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Shift) != 0) Console.Write("SHIFT+");
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
-            } while (run);
+            } while (consoleKeyInfo.Key != ConsoleKey.Escape);
         }
     }
 }
