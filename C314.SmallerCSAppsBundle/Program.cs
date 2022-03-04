@@ -79,8 +79,16 @@ int HelpArg(string input)
 }
 #endregion
 
+if (args.Length > 0)
+{
+    int res = HandleInput(string.Join(" ", args));
+    Console.WriteLine(res);
+    return res;
+}
+
 Console.WriteLine(title);
 Console.WriteLine();
+
 
 while (true)
 {
