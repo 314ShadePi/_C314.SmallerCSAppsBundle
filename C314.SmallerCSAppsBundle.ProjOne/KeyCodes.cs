@@ -8,7 +8,7 @@ namespace C314.SmallerCSAppsBundle.ProjOne
 {
     public class KeyCodes
     {
-        public static void KeyCodesMain()
+        public static int KeyCodesMain()
         {
             Console.TreatControlCAsInput = true;
             Console.Title = "Input Viewer";
@@ -25,6 +25,8 @@ namespace C314.SmallerCSAppsBundle.ProjOne
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
             } while (consoleKeyInfo.Key != ConsoleKey.Escape);
+
+            return 0;
         }
     }
 }
