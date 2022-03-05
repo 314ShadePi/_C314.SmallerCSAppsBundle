@@ -38,8 +38,8 @@
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="call ./CompileInstaller.cmd" />
-  </Target>
+	<Target Name="CustomActionsAfterPublish" AfterTargets="Publish">
+		<Exec Command="call ./CompileInstaller.cmd" />
+	</Target>
 
 </Project>
