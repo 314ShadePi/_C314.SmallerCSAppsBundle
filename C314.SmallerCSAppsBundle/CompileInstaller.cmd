@@ -1,0 +1,1 @@
+iscc ./C314.SmallerCSAppsBundle.iss

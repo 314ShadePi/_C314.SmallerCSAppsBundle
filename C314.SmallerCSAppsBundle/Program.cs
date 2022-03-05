@@ -5,7 +5,7 @@ using C314.SmallerCSAppsBundle.ProjOne;
 #endregion
 
 #region Setup
-const string title = "314 Smaller C# Programs Bundle";
+const string title = "314 smaller C# programs bundle";
 Dictionary<string, string> CommandsInfo = new Dictionary<string, string>();
 CommandsInfo.Add("general", "" + title + "\n\nSome small C# programs by 314\n\nAvailable commands:\n1. help\n2. KeyCodes\n\nFor more information about a specific command type \"help <command>\"");
 CommandsInfo.Add("help", "Displays help about the program (using \"help\") or a given command (using \"help <command>\")");

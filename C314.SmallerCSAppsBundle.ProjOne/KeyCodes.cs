@@ -13,7 +13,7 @@ namespace C314.SmallerCSAppsBundle.ProjOne
             Console.TreatControlCAsInput = true;
             Console.Title = "Input Viewer";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Welcome to Key Codes.\nWhen you press a key the program will output the keycode.\nPress \"Escape\" to exit.");
+            Console.WriteLine("Welcome to Key Codes.\nWhen you press a key the program will output the keycode in this format: \"<key you pressed> -> <keycode>\".\nPress \"Escape\" to exit.");
             ConsoleKeyInfo consoleKeyInfo;
 
             do

@@ -19,6 +19,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Installers\**" />
+    <Compile Remove="publish\**" />
+    <EmbeddedResource Remove="Installers\**" />
+    <EmbeddedResource Remove="publish\**" />
+    <None Remove="Installers\**" />
+    <None Remove="publish\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -28,5 +37,9 @@
   <ItemGroup>
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call ./CompileInstaller.cmd" />
+  </Target>
 
 </Project>
