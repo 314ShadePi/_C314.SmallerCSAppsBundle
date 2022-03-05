@@ -10,7 +10,20 @@
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
     <ErrorReport>prompt</ErrorReport>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Authors>314ShadePi</Authors>
+    <Description>A bundle containing some small C# programs made by 314ShadePi</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/314ShadePi/C314.SmallerCSAppsBundle</RepositoryUrl>
+    <NeutralLanguage>en-DK</NeutralLanguage>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
