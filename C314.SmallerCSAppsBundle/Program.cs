@@ -1,8 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 #region Usings
+using C314.SmallerCSAppsBundle;
 using C314.SmallerCSAppsBundle.ProjOne;
 using System.Linq;
+using CommandLine;
 #endregion
 
 #region Setup
@@ -42,16 +44,25 @@ int HandleInput(string? input)
     }
 }
 
-int HandleCmdLineInput(string[] input)
+void HandleCmdLineInput(CmdLineOptions options)
 {
-    /*switch (input[0])
-    {
-        case "-cmd":
-            return HandleInput(String.Join(" ", input.Skip(1).ToArray()));
-        case "-cmd"
-    }*/
+    if (options.Cmd != null) HandleInput(options.Cmd);
+}
 
-    return 0;
+void HandleParseError(IEnumerable<Error> errs)
+{
+    if (errs.IsVersion())
+    {
+        Console.WriteLine("Version Request");
+        return;
+    }
+
+    if (errs.IsHelp())
+    {
+        Console.WriteLine("Help Request");
+        return;
+    }
+    Console.WriteLine("Parser Fail");
 }
 #endregion
 
@@ -94,9 +105,11 @@ int HelpArg(string input)
 
 if (args.Length > 0)
 {
-    int res = HandleCmdLineInput(args);
-    Console.WriteLine(res);
-    return res;
+    CommandLine.Parser.Default.ParseArguments<CmdLineOptions>(args)
+    .WithParsed(HandleCmdLineInput)
+    .WithNotParsed(HandleParseError);
+
+    return 0;
 }
 
 Console.WriteLine(title);
