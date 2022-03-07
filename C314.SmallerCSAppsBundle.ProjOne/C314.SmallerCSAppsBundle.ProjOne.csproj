@@ -5,6 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Platforms>AnyCPU;x64</Platforms>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>314, 314ShadePi</Authors>
   </PropertyGroup>
 
 </Project>

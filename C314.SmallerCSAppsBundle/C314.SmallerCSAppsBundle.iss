@@ -18,8 +18,8 @@ DefaultDirName={autopf}\C314.SmallerCSAppsBundle
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=./Installers
-OutputBaseFilename=C314.SmallerCSAppsBundle
+OutputDir=../Installers
+OutputBaseFilename=C314.SmallerCSAppsBundle.Installer
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -55,10 +55,11 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle\publish\C314.SmallerCSAppsBundle.ProjOne.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\C314.SmallerCSAppsBundle\C314.SmallerCSAppsBundle\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.ProjOne.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.deps.json"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

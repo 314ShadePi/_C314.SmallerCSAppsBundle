@@ -2,6 +2,7 @@
 
 #region Usings
 using C314.SmallerCSAppsBundle.ProjOne;
+using System.Linq;
 #endregion
 
 #region Setup
@@ -39,6 +40,18 @@ int HandleInput(string? input)
             Setup();
             return -1;
     }
+}
+
+int HandleCmdLineInput(string[] input)
+{
+    /*switch (input[0])
+    {
+        case "-cmd":
+            return HandleInput(String.Join(" ", input.Skip(1).ToArray()));
+        case "-cmd"
+    }*/
+
+    return 0;
 }
 #endregion
 
@@ -81,7 +94,7 @@ int HelpArg(string input)
 
 if (args.Length > 0)
 {
-    int res = HandleInput(string.Join(" ", args));
+    int res = HandleCmdLineInput(args);
     Console.WriteLine(res);
     return res;
 }
