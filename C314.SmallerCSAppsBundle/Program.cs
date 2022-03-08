@@ -5,6 +5,7 @@ using C314.SmallerCSAppsBundle;
 using C314.SmallerCSAppsBundle.ProjOne;
 using System.Linq;
 using CommandLine;
+using Sharprompt;
 #endregion
 
 #region Setup
@@ -13,6 +14,13 @@ Dictionary<string, string> CommandsInfo = new Dictionary<string, string>();
 CommandsInfo.Add("general", "" + title + "\n\nSome small C# programs by 314\n\nAvailable commands:\n1. help\n2. KeyCodes\n\nFor more information about a specific command type \"help <command>\"");
 CommandsInfo.Add("help", "Displays help about the program (using \"help\") or a given command (using \"help <command>\")");
 CommandsInfo.Add("KeyCodes", "Runs the KeyCodes program which displays the keycode of the key you pressed in this format:\n<key you pressed> -> <keycode>");
+
+Dictionary<string, CDelegates.CmdWithNoArgs> CommandsWithNoArgs = new Dictionary<string, CDelegates.CmdWithNoArgs>();
+CommandsWithNoArgs.Add("KeyCodes", Key_Codes);
+CommandsWithNoArgs.Add("help", Help);
+
+Dictionary<string, CDelegates.CmdWithStringArgs> CommandsWithStringArgs = new Dictionary<string, CDelegates.CmdWithStringArgs>();
+CommandsWithStringArgs.Add("help", HelpArg);
 
 static void Setup()
 {
@@ -26,27 +34,32 @@ Setup();
 #region Methods
 int HandleInput(string? input)
 {
-    if (input == null || input == "") return -1;
-    string[] vs = input.Split(" ");
-    switch (vs[0])
+    if (String.IsNullOrEmpty(input)) return -1;
+    try
     {
-        case "KeyCodes": 
-            int res = Key_Codes();
+        int res;
+        if (input.Split(" ").Length >= 2)
+        {
+            string[] vs = input.Split(" ");
+            string arg = String.Join(" ", vs.Skip(1).ToArray());
+            res = CommandsWithStringArgs[vs[0]].Invoke(arg);
             Setup();
             return res;
-        case "help":
-            if (vs.Length > 1) return HelpArg(vs[1]);
-            return Help();
-        case "Exit": return -3;
-        default: 
-            Setup();
-            return -1;
+        }
+
+        res = CommandsWithNoArgs[input].Invoke();
+        Setup();
+        return res;
+    }
+    catch
+    {
+        return -1;
     }
 }
 
 void HandleCmdLineInput(CmdLineOptions options)
 {
-    if (options.Cmd != null) HandleInput(options.Cmd);
+    if (!String.IsNullOrEmpty(options.Cmd)) HandleInput(options.Cmd);
 }
 
 void HandleParseError(IEnumerable<Error> errs)
@@ -118,9 +131,7 @@ Console.WriteLine();
 
 while (true)
 {
-    Console.Write("Home>");
-    string? ConsoleInput = Console.ReadLine();
-    int res = HandleInput(ConsoleInput);
+    int res = HandleInput(Prompt.Input<string>("CMD"));
     Console.WriteLine(res);
     if (res == -3) return 0;
 }
