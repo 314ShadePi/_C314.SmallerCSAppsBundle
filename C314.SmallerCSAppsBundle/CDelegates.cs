@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace C314.SmallerCSAppsBundle
+﻿namespace C314.SmallerCSAppsBundle
 {
     internal class CDelegates
     {

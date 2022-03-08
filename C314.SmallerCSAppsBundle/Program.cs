@@ -3,7 +3,6 @@
 #region Usings
 using C314.SmallerCSAppsBundle;
 using C314.SmallerCSAppsBundle.ProjOne;
-using System.Linq;
 using CommandLine;
 using Sharprompt;
 #endregion

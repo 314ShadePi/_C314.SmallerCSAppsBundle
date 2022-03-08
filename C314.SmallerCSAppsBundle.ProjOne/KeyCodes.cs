@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace C314.SmallerCSAppsBundle.ProjOne
+﻿namespace C314.SmallerCSAppsBundle.ProjOne
 {
     public class KeyCodes
     {
