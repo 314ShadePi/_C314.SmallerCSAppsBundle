@@ -1,12 +1,10 @@
-﻿using C314.SmallerCSAppsBundle.ProjOne;
-
-namespace C314.SmallerCSAppsBundle
+﻿namespace C314.SmallerCSAppsBundle
 {
     internal class Commands
     {
         public static int Key_Codes()
         {
-            return KeyCodes.KeyCodesMain();
+            return ProjOne.KeyCodes.KeyCodesMain();
         }
 
         public static int Help()
