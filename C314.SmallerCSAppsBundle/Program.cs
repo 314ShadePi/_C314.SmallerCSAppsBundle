@@ -24,9 +24,19 @@ namespace C314.SmallerCSAppsBundle
 
             while (true)
             {
-                int res = CInputHandlers.HandleInput(Prompt.Input<string>("CMD"));
-                Console.WriteLine(res);
-                if (res == -3) return 0;
+                try
+                {
+                    int res = CInputHandlers.HandleInput(Prompt.Input<string>("CMD"));
+                    Console.WriteLine(res);
+                    if (res == -3) return 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    int res = CInputHandlers.HandleInput(Console.ReadLine());
+                    Console.WriteLine(res);
+                    if (res == -3) return 0;
+                }
             }
         }
     }
