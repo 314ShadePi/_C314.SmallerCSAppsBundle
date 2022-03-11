@@ -4,7 +4,9 @@
       "commandName": "Project"
     },
     "WSL": {
-      "commandName": "WSL2",
+      "commandName": "WSL",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:5001",
       "environmentVariables": {},
       "distributionName": ""
     }
