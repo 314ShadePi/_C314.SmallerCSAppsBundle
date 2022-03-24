@@ -41,6 +41,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
+    <ProjectReference Include="..\C314.SmallerCSAppsBundle.SingleMethodCommands\C314.SmallerCSAppsBundle.SingleMethodCommands.csproj" />
   </ItemGroup>
 
 	<Target Name="CustomActionsAfterPublish" AfterTargets="Publish">

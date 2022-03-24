@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle.ProjOne", "C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj", "{5DF8474C-04CA-4AAB-93E5-E676641B1BC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C314.SmallerCSAppsBundle.SingleMethodCommands", "C314.SmallerCSAppsBundle.SingleMethodCommands\C314.SmallerCSAppsBundle.SingleMethodCommands.csproj", "{A165FB45-CDB4-426C-B75A-371AF3F1B500}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{5DF8474C-04CA-4AAB-93E5-E676641B1BC2}.Release|x64.Build.0 = Release|x64
 		{5DF8474C-04CA-4AAB-93E5-E676641B1BC2}.Release|x86.ActiveCfg = Release|Any CPU
 		{5DF8474C-04CA-4AAB-93E5-E676641B1BC2}.Release|x86.Build.0 = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|x64.Build.0 = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Debug|x86.Build.0 = Debug|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|x64.ActiveCfg = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|x64.Build.0 = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|x86.ActiveCfg = Release|Any CPU
+		{A165FB45-CDB4-426C-B75A-371AF3F1B500}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

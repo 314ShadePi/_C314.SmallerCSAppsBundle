@@ -4,6 +4,6 @@
     {
         public static Dictionary<string, string> CommandsInfo = new Dictionary<string, string>();
         public static Dictionary<string, CDelegates.CmdWithNoArgs> CommandsWithNoArgs = new Dictionary<string, CDelegates.CmdWithNoArgs>();
-        public static Dictionary<string, CDelegates.CmdWithStringArgs> CommandsWithStringArgs = new Dictionary<string, CDelegates.CmdWithStringArgs>();
+        public static Dictionary<string, CDelegates.CmdWithStringArgs> CommandsWithArgs = new Dictionary<string, CDelegates.CmdWithStringArgs>();
     }
 }

@@ -36,5 +36,23 @@
                 return -1;
             }
         }
+
+        public static int Hmstoms(string args)
+        {
+            try
+            {
+                string[] vs = args.Split(" ");
+                int h = int.Parse(vs[0]);
+                int m = int.Parse(vs[1]);
+                int s = int.Parse(vs[2]);
+                Console.WriteLine(SingleMethodCommands.Time.HMSToMs(h, m, s));
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return -1;
+            }
+        }
     }
 }

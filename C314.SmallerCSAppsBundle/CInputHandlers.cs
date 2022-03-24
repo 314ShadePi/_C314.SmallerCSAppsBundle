@@ -12,7 +12,7 @@
                 {
                     string[] vs = input.Split(" ");
                     string arg = String.Join(" ", vs.Skip(1).ToArray());
-                    res = CDictionaries.CommandsWithStringArgs[vs[0]].Invoke(arg);
+                    res = CDictionaries.CommandsWithArgs[vs[0]].Invoke(arg);
                     stdSetup.Setup();
                     return res;
                 }
