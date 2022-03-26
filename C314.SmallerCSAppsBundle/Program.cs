@@ -8,7 +8,7 @@ namespace C314.SmallerCSAppsBundle
         static void Main(string[] args)
         {
             Type[] types = { typeof(hmstoms) };
-            Parser.Default.ParseArguments(args, types)
+            _ = Parser.Default.ParseArguments(args, types)
                   .WithParsed(Run)
                   .WithNotParsed(errors => CErrorHandlers.HandleParseError(errors));
         }
