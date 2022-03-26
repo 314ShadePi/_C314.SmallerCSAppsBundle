@@ -13,7 +13,6 @@
             CDictionaries.CommandsWithNoArgs.Add("KeyCodes", Commands.Key_Codes);
             CDictionaries.CommandsWithNoArgs.Add("help", Commands.Help);
             CDictionaries.CommandsWithArgs.Add("help", Commands.HelpArg);
-            CDictionaries.CommandsWithArgs.Add("hmstoms", Commands.Hmstoms);
         }
         public static void Setup()
         {

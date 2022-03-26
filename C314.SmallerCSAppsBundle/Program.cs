@@ -8,27 +8,19 @@ namespace C314.SmallerCSAppsBundle
         public static int Main(string[] args)
         {
             stdSetup.FirstTimeSetup();
-
-            if (args.Length > 0)
-            {
-                CommandLine.Parser.Default.ParseArguments<CmdLineOptions>(args)
-                .WithParsed(CInputHandlers.HandleCmdLineInput)
-                .WithNotParsed(CErrorHandlers.HandleParseError);
-
-                return 0;
-            }
-
             Console.WriteLine(stdSetup.title);
             Console.WriteLine();
-
-
             while (true)
             {
                 try
                 {
-                    int res = CInputHandlers.HandleInput(Prompt.Input<string>("CMD"));
-                    Console.WriteLine(res);
-                    if (res == -3) return 0;
+                    string input = Prompt.Input<string>("CMD");
+                    string[] Cargs = input.Split(" ");
+                    CommandLine.Parser.Default.ParseArguments<Verbs.hmstoms>(Cargs)
+                        .MapResult(
+                            (Verbs.hmstoms opts) => CInputHandlers.RunHmstomsAndReturnExitCode(opts),
+                            errs => CErrorHandlers.HandleParseError(errs));
+                    return 0;
                 }
                 catch (Exception ex)
                 {

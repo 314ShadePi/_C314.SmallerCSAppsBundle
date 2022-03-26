@@ -8,6 +8,6 @@ namespace C314.SmallerCSAppsBundle.SingleMethodCommands
 {
     public class Time
     {
-        public static int HMSToMs(int h, int m, int s) => h * 3600000 + m * 60000 + s * 1000;
+        public static int HMSToMs(int[] hms) => hms[0] * 3600000 + hms[1] * 60000 + hms[2] * 1000;
     }
 }

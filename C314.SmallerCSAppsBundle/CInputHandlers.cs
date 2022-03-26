@@ -27,9 +27,9 @@
             }
         }
 
-        public static void HandleCmdLineInput(CmdLineOptions options)
+        public static int RunHmstomsAndReturnExitCode(Verbs.hmstoms options)
         {
-            if (!String.IsNullOrEmpty(options.Cmd)) HandleInput(options.Cmd);
+                return Commands.Hmstoms(options.Hms);
         }
     }
 }

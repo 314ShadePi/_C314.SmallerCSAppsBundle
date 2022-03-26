@@ -37,22 +37,10 @@
             }
         }
 
-        public static int Hmstoms(string args)
+        public static int Hmstoms(int[] hms)
         {
-            try
-            {
-                string[] vs = args.Split(" ");
-                int h = int.Parse(vs[0]);
-                int m = int.Parse(vs[1]);
-                int s = int.Parse(vs[2]);
-                Console.WriteLine(SingleMethodCommands.Time.HMSToMs(h, m, s));
+                Console.WriteLine(SingleMethodCommands.Time.HMSToMs(hms));
                 return 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return -1;
-            }
         }
     }
 }
