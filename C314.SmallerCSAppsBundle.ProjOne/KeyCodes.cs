@@ -2,7 +2,7 @@
 {
     public class KeyCodes
     {
-        public static int KeyCodesMain()
+        public static void KeyCodesMain()
         {
             Console.TreatControlCAsInput = true;
             Console.Title = "Input Viewer";
@@ -19,8 +19,6 @@
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
             } while (consoleKeyInfo.Key != ConsoleKey.Escape);
-
-            return 0;
         }
     }
 }
