@@ -62,7 +62,6 @@ Source: ".\publish\C314.SmallerCSAppsBundle.SingleMethodCommands.dll"; DestDir: 
 Source: ".\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.deps.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\CommandLine.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\publish\Sharprompt.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

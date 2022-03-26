@@ -1,42 +1,58 @@
 ﻿using CommandLine;
-using Sharprompt;
+using System.Reflection;
 
 namespace C314.SmallerCSAppsBundle
 {
     internal class Program
     {
-        public static int Main(string[] args)
+        static void Main(string[] args)
         {
-            stdSetup.FirstTimeSetup();
+            //Type[] types = { typeof(Options), typeof(Hmstoms) };
+            Type[] types = LoadVerbs();
+            Parser.Default.ParseArguments(args, types)
+                  .WithParsed(Run)
+                  .WithNotParsed(HandleErrors);
+        }
 
-            if (args.Length > 0)
+        private static Type[] LoadVerbs()
+        {
+            return Assembly.GetExecutingAssembly().GetTypes()
+                .Where(t => t.GetCustomAttribute<VerbAttribute>() != null).ToArray();
+        }
+
+        private static void HandleErrors(IEnumerable<Error> errors)
+        {
+            if (errors.IsVersion())
             {
-                CommandLine.Parser.Default.ParseArguments<CmdLineOptions>(args)
-                .WithParsed(CInputHandlers.HandleCmdLineInput)
-                .WithNotParsed(CErrorHandlers.HandleParseError);
-
-                return 0;
+                Console.WriteLine("Version Request");
+                return;
             }
 
-            Console.WriteLine(stdSetup.title);
-            Console.WriteLine();
-
-
-            while (true)
+            if (errors.IsHelp())
             {
-                try
-                {
-                    int res = CInputHandlers.HandleInput(Prompt.Input<string>("CMD"));
-                    Console.WriteLine(res);
-                    if (res == -3) return 0;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                    int res = CInputHandlers.HandleInput(Console.ReadLine());
-                    Console.WriteLine(res);
-                    if (res == -3) return 0;
-                }
+                Console.WriteLine("Help Request");
+                return;
+            }
+            Console.WriteLine("Parser Fail");
+        }
+
+        private static void Run(object obj)
+        {
+            switch (obj)
+            {
+                case Options o:
+                    if (o.Keycodes)
+                    {
+                        ProjOne.KeyCodes.KeyCodesMain();
+                        break;
+                    }
+                    break;
+                case Hmstoms o:
+                    Console.WriteLine(SingleMethodCommands.Time.HMSToMs(o.H, o.M, o.S));
+                    break;
+                default:
+                    Console.WriteLine(obj.ToString());
+                    break;
             }
         }
     }

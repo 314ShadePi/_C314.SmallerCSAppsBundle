@@ -36,7 +36,6 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="Sharprompt" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
