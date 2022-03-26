@@ -37,7 +37,7 @@
             }
         }
 
-        public static int Hmstoms(int[] hms)
+        public static int Hmstoms(int[]? hms)
         {
                 Console.WriteLine(SingleMethodCommands.Time.HMSToMs(hms));
                 return 0;

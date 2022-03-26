@@ -1,5 +1,5 @@
 ﻿using CommandLine;
-using Sharprompt;
+using C314.SmallerCSAppsBundle.Verbs;
 
 namespace C314.SmallerCSAppsBundle
 {
@@ -7,28 +7,26 @@ namespace C314.SmallerCSAppsBundle
     {
         public static int Main(string[] args)
         {
+            Type[] types = { typeof(hmstoms) };
             stdSetup.FirstTimeSetup();
             Console.WriteLine(stdSetup.title);
             Console.WriteLine();
-            while (true)
+            Parser.Default.ParseArguments(args, types)
+                  .WithParsed(Run)
+                  .WithNotParsed(errors => CErrorHandlers.HandleParseError(errors));
+            return 0;
+        }
+
+        private static void Run(object obj)
+        {
+            switch (obj)
             {
-                try
-                {
-                    string input = Prompt.Input<string>("CMD");
-                    string[] Cargs = input.Split(" ");
-                    CommandLine.Parser.Default.ParseArguments<Verbs.hmstoms>(Cargs)
-                        .MapResult(
-                            (Verbs.hmstoms opts) => CInputHandlers.RunHmstomsAndReturnExitCode(opts),
-                            errs => CErrorHandlers.HandleParseError(errs));
-                    return 0;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                    int res = CInputHandlers.HandleInput(Console.ReadLine());
-                    Console.WriteLine(res);
-                    if (res == -3) return 0;
-                }
+                case hmstoms h:
+                    SingleMethodCommands.Time.HMSToMs(h.Hms);
+                    break;
+                default:
+                    Console.WriteLine("Error");
+                    break;
             }
         }
     }

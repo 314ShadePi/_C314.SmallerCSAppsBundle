@@ -1,4 +1,6 @@
-﻿namespace C314.SmallerCSAppsBundle
+﻿using C314.SmallerCSAppsBundle.Verbs;
+
+namespace C314.SmallerCSAppsBundle
 {
     internal class CInputHandlers
     {
@@ -25,11 +27,6 @@
             {
                 return -1;
             }
-        }
-
-        public static int RunHmstomsAndReturnExitCode(Verbs.hmstoms options)
-        {
-                return Commands.Hmstoms(options.Hms);
         }
     }
 }
