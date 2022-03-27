@@ -7,7 +7,6 @@ namespace C314.SmallerCSAppsBundle
     {
         static void Main(string[] args)
         {
-            //Type[] types = { typeof(Options), typeof(Hmstoms) };
             Type[] types = LoadVerbs();
             Parser.Default.ParseArguments(args, types)
                   .WithParsed(Run)
@@ -41,17 +40,10 @@ namespace C314.SmallerCSAppsBundle
             switch (obj)
             {
                 case Options o:
-                    if (o.Keycodes)
-                    {
-                        ProjOne.KeyCodes.KeyCodesMain();
-                        break;
-                    }
+                    o.HandleInput();
                     break;
                 case Hmstoms o:
-                    Console.WriteLine(SingleMethodCommands.Time.HMSToMs(o.H, o.M, o.S));
-                    break;
-                default:
-                    Console.WriteLine(obj.ToString());
+                    o.HandleInput();
                     break;
             }
         }
