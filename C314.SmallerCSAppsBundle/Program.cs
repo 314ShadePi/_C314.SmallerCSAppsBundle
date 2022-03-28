@@ -37,14 +37,12 @@ namespace C314.SmallerCSAppsBundle
 
         private static void Run(object obj)
         {
-            switch (obj)
+            if (obj.GetType().GetInterfaces().Contains(typeof(IVerb)))
+                ((IVerb)obj).HandleInput();
+            else
             {
-                case Options o:
-                    o.HandleInput();
-                    break;
-                case Hmstoms o:
-                    o.HandleInput();
-                    break;
+                Console.WriteLine("Error: Verb failed to implement IVerb");
+                throw new Exception("Verb failed to implement IVerb");
             }
         }
     }
