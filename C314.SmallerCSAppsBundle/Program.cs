@@ -7,7 +7,6 @@ namespace C314.SmallerCSAppsBundle
     {
         static void Main(string[] args)
         {
-            //Type[] types = { typeof(Options), typeof(Hmstoms) };
             Type[] types = LoadVerbs();
             Parser.Default.ParseArguments(args, types)
                   .WithParsed(Run)
@@ -38,21 +37,12 @@ namespace C314.SmallerCSAppsBundle
 
         private static void Run(object obj)
         {
-            switch (obj)
+            if (obj.GetType().GetInterfaces().Contains(typeof(IVerb)))
+                ((IVerb)obj).HandleInput();
+            else
             {
-                case Options o:
-                    if (o.Keycodes)
-                    {
-                        ProjOne.KeyCodes.KeyCodesMain();
-                        break;
-                    }
-                    break;
-                case Hmstoms o:
-                    Console.WriteLine(SingleMethodCommands.Time.HMSToMs(o.H, o.M, o.S));
-                    break;
-                default:
-                    Console.WriteLine(obj.ToString());
-                    break;
+                Console.WriteLine("Error: Verb failed to implement IVerb");
+                throw new Exception("Verb failed to implement IVerb");
             }
         }
     }
