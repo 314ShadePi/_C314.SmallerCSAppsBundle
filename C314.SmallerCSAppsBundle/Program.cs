@@ -9,10 +9,10 @@ namespace C314.SmallerCSAppsBundle
         static void Main(string[] args)
         {
             Type[] types = LoadVerbs();
-            #if DEBUG
+#if DEBUG
             foreach (Type t in types)
                 Console.WriteLine(t.FullName + "\n");
-            #endif
+#endif
             _ = Parser.Default.ParseArguments(args, types)
                   .WithParsed(obj => ((Common.IVerb)obj).HandleInput())
                   .WithNotParsed(HandleErrors);

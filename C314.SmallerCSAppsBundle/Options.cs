@@ -10,7 +10,7 @@ namespace C314.SmallerCSAppsBundle
 
         public void HandleInput()
         {
-            if (this.Keycodes)
+            if (Keycodes)
             {
                 ProjOne.KeyCodes.KeyCodesMain();
                 return;
