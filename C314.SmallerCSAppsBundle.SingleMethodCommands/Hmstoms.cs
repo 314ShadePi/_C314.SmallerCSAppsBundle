@@ -1,9 +1,9 @@
 ﻿using CommandLine;
 
-namespace C314.SmallerCSAppsBundle
+namespace C314.SmallerCSAppsBundle.SingleMethodCommands
 {
     [Verb("hmstoms", HelpText = "Converts Hours, Minutes and Seconds to milliseconds. Input should be seperated with spaces")]
-    public class Hmstoms : IVerb
+    public class Hmstoms : Common.IVerb
     {
         [Value(0, HelpText = "Hours")]
         public int H { get; set; }
@@ -14,7 +14,7 @@ namespace C314.SmallerCSAppsBundle
 
         public void HandleInput()
         {
-            Console.WriteLine(SingleMethodCommands.Time.HMSToMs(this.H, this.M, this.S));
+            Console.WriteLine(Time.HMSToMs(H, M, S));
             return;
         }
     }

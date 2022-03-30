@@ -7,7 +7,6 @@
             Console.TreatControlCAsInput = true;
             Console.Title = "Input Viewer";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Welcome to Key Codes.\nWhen you press a key the program will output the keycode in this format: \"<key you pressed> -> <keycode>\".\nPress \"Escape\" to exit.");
             ConsoleKeyInfo consoleKeyInfo;
 
             do
@@ -19,6 +18,8 @@
                 if ((consoleKeyInfo.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
                 Console.WriteLine(consoleKeyInfo.Key.ToString());
             } while (consoleKeyInfo.Key != ConsoleKey.Escape);
+
+            Console.ResetColor();
         }
     }
 }

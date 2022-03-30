@@ -57,6 +57,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: ".\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.ProjOne.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.SingleMethodCommands.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
