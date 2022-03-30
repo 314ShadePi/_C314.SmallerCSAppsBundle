@@ -32,7 +32,7 @@ namespace C314.SmallerCSAppsBundle
                 Console.WriteLine("Help Request");
                 return;
             }
-            
+
             Console.WriteLine("Parser Fail");
 
             foreach (var error in errors)
