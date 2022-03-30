@@ -8,15 +8,15 @@ namespace C314.SmallerCSAppsBundle
         static void Main(string[] args)
         {
             Type[] types = LoadVerbs();
-            Parser.Default.ParseArguments(args, types)
-                  .WithParsed(Run)
+            _ = Parser.Default.ParseArguments(args, types)
+                  .WithParsed(obj => ((IVerb)obj).HandleInput())
                   .WithNotParsed(HandleErrors);
         }
 
         private static Type[] LoadVerbs()
         {
             return Assembly.GetExecutingAssembly().GetTypes()
-                .Where(t => t.GetCustomAttribute<VerbAttribute>() != null).ToArray();
+                .Where(t => t.GetCustomAttribute<VerbAttribute>() != null && t.GetInterfaces().Contains(typeof(IVerb))).ToArray();
         }
 
         private static void HandleErrors(IEnumerable<Error> errors)
@@ -32,17 +32,12 @@ namespace C314.SmallerCSAppsBundle
                 Console.WriteLine("Help Request");
                 return;
             }
+            
             Console.WriteLine("Parser Fail");
-        }
 
-        private static void Run(object obj)
-        {
-            if (obj.GetType().GetInterfaces().Contains(typeof(IVerb)))
-                ((IVerb)obj).HandleInput();
-            else
+            foreach (var error in errors)
             {
-                Console.WriteLine("Error: Verb failed to implement IVerb");
-                throw new Exception("Verb failed to implement IVerb");
+                Console.WriteLine(error.ToString());
             }
         }
     }
