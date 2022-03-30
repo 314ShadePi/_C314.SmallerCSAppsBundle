@@ -1,4 +1,4 @@
-﻿namespace C314.SmallerCSAppsBundle
+﻿namespace C314.SmallerCSAppsBundle.Common
 {
     public interface IVerb
     {

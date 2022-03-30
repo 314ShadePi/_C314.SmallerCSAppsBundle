@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\C314.SmallerCSAppsBundle.Common\C314.SmallerCSAppsBundle.Common.csproj" />
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.ProjOne\C314.SmallerCSAppsBundle.ProjOne.csproj" />
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.SingleMethodCommands\C314.SmallerCSAppsBundle.SingleMethodCommands.csproj" />
   </ItemGroup>
