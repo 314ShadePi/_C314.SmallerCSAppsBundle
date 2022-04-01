@@ -1,0 +1,3 @@
+[submodule "jsonTemplates"]
+	path = jsonTemplates
+	url = https://github.com/314ShadePi/jsonTemplates

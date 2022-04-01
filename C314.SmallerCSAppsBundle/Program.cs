@@ -6,6 +6,8 @@ namespace C314.SmallerCSAppsBundle
     internal class Program
     {
         private static SingleMethodCommands.Time _time = new SingleMethodCommands.Time();
+        private static Lists.Create _create = new Lists.Create();
+        
         static void Main(string[] args)
         {
             Type[] types = LoadVerbs();
