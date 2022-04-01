@@ -27,9 +27,9 @@ namespace C314.SmallerCSAppsBundle
             foreach (var assemblyName in Assembly.GetExecutingAssembly().GetReferencedAssemblies())
             {
                 Assembly assembly = Assembly.Load(assemblyName);
-                #if DEBUG
+#if DEBUG
                 Console.WriteLine(assemblyName.FullName + "\n");
-                #endif
+#endif
                 types.AddRange(assembly.GetTypes().Where(t => t.GetCustomAttribute<VerbAttribute>() != null && t.GetInterfaces().Contains(typeof(Common.IVerb))).ToArray());
             }
 
