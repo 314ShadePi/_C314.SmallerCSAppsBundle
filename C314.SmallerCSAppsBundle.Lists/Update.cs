@@ -56,6 +56,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                 list.items.Add(new Item { name = Item, description = Description });
                 json = JsonConvert.SerializeObject(list);
                 File.WriteAllText(path, json);
+                Console.WriteLine($"Item {Item} added to list {Name}.");
                 return;
             }
 
@@ -70,10 +71,12 @@ namespace C314.SmallerCSAppsBundle.Lists
                 if (NewName != null)
                 {
                     item.name = NewName;
+                    Console.WriteLine($"Item {Item} renamed to {NewName}.");
                 }
                 if (Description != null)
                 {
                     item.description = Description;
+                    Console.WriteLine($"Item {Item}'s description changed to {Description}.");
                 }
                 json = JsonConvert.SerializeObject(list);
                 File.WriteAllText(path, json);
@@ -91,6 +94,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                 list.items.Remove(item);
                 json = JsonConvert.SerializeObject(list);
                 File.WriteAllText(path, json);
+                Console.WriteLine($"Item {Item} removed from list {Name}.");
                 return;
             }
         }

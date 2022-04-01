@@ -44,6 +44,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                 Directory.CreateDirectory(dir);
             }
             File.WriteAllText(Path.Combine(dir, fileName), json);
+            Console.WriteLine($"Created list {Name}.");
         }
     }
 }

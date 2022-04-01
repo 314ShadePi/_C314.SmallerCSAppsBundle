@@ -25,6 +25,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                 return;
             }
             File.Delete(path);
+            Console.WriteLine($"List {Name} deleted.");
         }
     }
 }
