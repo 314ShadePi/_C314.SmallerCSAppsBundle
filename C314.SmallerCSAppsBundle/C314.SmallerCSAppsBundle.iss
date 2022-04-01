@@ -51,9 +51,6 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
-[Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-
 [Files]
 Source: ".\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -90,11 +87,4 @@ begin
   { Pos() returns 0 if not found }
   Result := Pos(';' + Param + ';', ';' + OrigPath + ';') = 0;
 end;
-
-[Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
-
-[Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
