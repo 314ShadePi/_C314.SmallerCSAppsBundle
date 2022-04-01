@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\C314.SmallerCSAppsBundle.Common\C314.SmallerCSAppsBundle.Common.csproj" />
+    <ProjectReference Include="..\jsonTemplates\C314.jsonTemplates\C314.jsonTemplates\C314.jsonTemplates.csproj" />
+  </ItemGroup>
+
+</Project>

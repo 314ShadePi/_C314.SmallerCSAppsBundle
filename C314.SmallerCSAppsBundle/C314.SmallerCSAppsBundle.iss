@@ -60,10 +60,36 @@ Source: ".\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignor
 Source: ".\publish\C314.SmallerCSAppsBundle.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.ProjOne.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.SingleMethodCommands.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.jsonTemplates.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.SmallerCSAppsBundle.Lists.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.deps.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\CommandLine.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Registry]
+Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; \
+    ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; \
+    Check: NeedsAddPath('{app}')
+
+[Code]
+
+function NeedsAddPath(Param: string): boolean;
+var
+  OrigPath: string;
+begin
+  if not RegQueryStringValue(HKEY_LOCAL_MACHINE,
+    'SYSTEM\CurrentControlSet\Control\Session Manager\Environment',
+    'Path', OrigPath)
+  then begin
+    Result := True;
+    exit;
+  end;
+  { look for the path with leading and trailing semicolon }
+  { Pos() returns 0 if not found }
+  Result := Pos(';' + Param + ';', ';' + OrigPath + ';') = 0;
+end;
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
