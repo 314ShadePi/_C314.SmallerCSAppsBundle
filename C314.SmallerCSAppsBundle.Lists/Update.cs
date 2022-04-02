@@ -192,6 +192,7 @@ namespace C314.SmallerCSAppsBundle.Lists
 
                 if (Add && list.items != null)
                 {
+                    // Why not working?
                     if (list.items.Any(x => x.name == Item))
                     {
                         Console.WriteLine($"Item {Item} already exists in list {Name}.");
