@@ -56,7 +56,15 @@ namespace C314.SmallerCSAppsBundle.Lists
             {
                 if (ABoards)
                 {
+                    if (list.boards.Any(x => x.name == Board))
+                    {
+                        Console.WriteLine($"Board {Board} already exists in list {Name}.");
+                        return;
+                    }
                     list.boards.Add(new Board() { name = Board, description = Description, items = new List<Item>() { } });
+                    json = JsonConvert.SerializeObject(list);
+                    File.WriteAllText(path, json);
+                    Console.WriteLine($"Board {Board} added to list {Name}.");
                     return;
                 }
                 for (int i = 0; i < list.boards.Count; i++)
