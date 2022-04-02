@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\C314.jsonTemplates\C314.jsonTemplates\C314.jsonTemplates.csproj" />
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.Common\C314.SmallerCSAppsBundle.Common.csproj" />
-    <ProjectReference Include="..\jsonTemplates\C314.jsonTemplates\C314.jsonTemplates\C314.jsonTemplates.csproj" />
   </ItemGroup>
 
 </Project>
