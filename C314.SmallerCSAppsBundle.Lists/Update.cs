@@ -190,7 +190,7 @@ namespace C314.SmallerCSAppsBundle.Lists
             {
                 CList list = JsonConvert.DeserializeObject<CList>(json);
 
-                if (Add && list != null)
+                if (Add && list.items != null)
                 {
                     if (list.items.Any(x => x.name == Item))
                     {
@@ -204,7 +204,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                     return;
                 }
 
-                if (Edit && list != null)
+                if (Edit && list.items != null)
                 {
                     var item = list.items.FirstOrDefault(i => i.name == Item);
                     if (item == null)
@@ -227,7 +227,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                     return;
                 }
 
-                if (Delete && list != null)
+                if (Delete && list.items != null)
                 {
                     var item = list.items.FirstOrDefault(i => i.name == Item);
                     if (item == null)
