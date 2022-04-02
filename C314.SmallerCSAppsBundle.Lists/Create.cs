@@ -27,9 +27,12 @@ namespace C314.SmallerCSAppsBundle.Lists
         [Option('e', "boarddescription", Required = false, HelpText = "The description of the board.")]
         public string BoardDescription { get; set; }
 
+        [Option('a', "advanced", Required = false, HelpText = "Advanced mode.")]
+        public bool Adcvanced { get; set; }
+
         public void HandleInput()
         {
-            if (String.IsNullOrWhiteSpace(Board))
+            if (Adcvanced)
             {
                 CAList alist = new CAList
                 {

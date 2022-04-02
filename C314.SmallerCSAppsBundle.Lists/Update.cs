@@ -56,6 +56,9 @@ namespace C314.SmallerCSAppsBundle.Lists
         [Option('x', "editinboard", Required = false, HelpText = "Edit an item in a board.")]
         public bool EditInBoard { get; set; }
 
+        [Option('v', "advanced", Required = false, HelpText = "advanced.")]
+        public bool Advanced { get; set; }
+
         public void HandleInput()
         {
             string fileName = $"{Name.Replace(' ', '_')}.json";
@@ -68,7 +71,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                 return;
             }
             var json = File.ReadAllText(path);
-            if (String.IsNullOrWhiteSpace(Board))
+            if (Advanced)
             {
                 CAList alist = JsonConvert.DeserializeObject<CAList>(json);
                 if (AddToBoard)
@@ -187,7 +190,7 @@ namespace C314.SmallerCSAppsBundle.Lists
             {
                 CList list = JsonConvert.DeserializeObject<CList>(json);
 
-                if (Add)
+                if (Add && list != null)
                 {
                     if (list.items.Any(x => x.name == Item))
                     {
@@ -201,7 +204,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                     return;
                 }
 
-                if (Edit)
+                if (Edit && list != null)
                 {
                     var item = list.items.FirstOrDefault(i => i.name == Item);
                     if (item == null)
@@ -224,7 +227,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                     return;
                 }
 
-                if (Delete)
+                if (Delete && list != null)
                 {
                     var item = list.items.FirstOrDefault(i => i.name == Item);
                     if (item == null)
