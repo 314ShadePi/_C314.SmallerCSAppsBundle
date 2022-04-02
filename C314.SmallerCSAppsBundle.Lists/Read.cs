@@ -14,7 +14,10 @@ namespace C314.SmallerCSAppsBundle.Lists
     {
         [Option('n', "name", Required = true, HelpText = "The name of the list.")]
         public string Name { get; set; }
-        
+
+        [Option('a', "advanced", Required = false, HelpText = "Show advanced information.")]
+        public bool Advanced { get; set; }
+
         public void HandleInput()
         {
             string fileName = $"{Name.Replace(' ', '_')}.json";
@@ -27,8 +30,9 @@ namespace C314.SmallerCSAppsBundle.Lists
                 return;
             }
             var json = File.ReadAllText(path);
-            if (JsonConvert.DeserializeObject<CAList>(json) is CAList alist)
+            if (Advanced)
             {
+                CAList alist = JsonConvert.DeserializeObject<CAList>(json);
                 Console.WriteLine($"List {Name}");
                 foreach (var board in alist.boards)
                 {
