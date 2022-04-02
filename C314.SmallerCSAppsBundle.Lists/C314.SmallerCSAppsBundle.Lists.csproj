@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="C314.JsonUtils.Templates" Version="1.0.0" />
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\C314.jsonTemplates\C314.jsonTemplates\C314.jsonTemplates.csproj" />
     <ProjectReference Include="..\C314.SmallerCSAppsBundle.Common\C314.SmallerCSAppsBundle.Common.csproj" />
   </ItemGroup>
 

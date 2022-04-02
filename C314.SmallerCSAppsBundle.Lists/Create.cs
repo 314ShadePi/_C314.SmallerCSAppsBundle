@@ -29,7 +29,7 @@ namespace C314.SmallerCSAppsBundle.Lists
 
         public void HandleInput()
         {
-            CAList list = new CAList
+            CList list = new CList
             {
                 boards = new List<Board>
                 {
