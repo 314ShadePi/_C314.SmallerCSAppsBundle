@@ -30,25 +30,15 @@ namespace C314.SmallerCSAppsBundle.Lists
                 return;
             }
             var json = File.ReadAllText(path);
-            if (Advanced)
+            CAList list = JsonConvert.DeserializeObject<CAList>(json);
+            Console.WriteLine($"List {Name}");
+            foreach (var board in list.boards)
             {
-                CAList alist = JsonConvert.DeserializeObject<CAList>(json);
-                Console.WriteLine($"List {Name}");
-                foreach (var board in alist.boards)
+                Console.WriteLine($"\tBoard {board.name} - {board.description}");
+                foreach (var item in board.items)
                 {
-                    Console.WriteLine($"\tBoard {board.name} - {board.description}");
-                    foreach (var item in board.items)
-                    {
-                        Console.WriteLine($"\t\t{item.name}:\n\t\t\t{item.description}");
-                    }
+                    Console.WriteLine($"\t\t{item.name}:\n\t\t\t{item.description}");
                 }
-                return;
-            }
-            CList list = JsonConvert.DeserializeObject<CList>(json);
-            Console.WriteLine($"List {Name} contains {list.items.Count} items.");
-            foreach (var item in list.items)
-            {
-                Console.WriteLine($"\t{item.name}:\n\t\t{item.description}");
             }
         }
     }
