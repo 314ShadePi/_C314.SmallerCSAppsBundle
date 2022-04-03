@@ -57,7 +57,7 @@ Source: ".\publish\C314.SmallerCSAppsBundle.dll"; DestDir: "{app}"; Flags: ignor
 Source: ".\publish\C314.SmallerCSAppsBundle.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.ProjOne.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.SingleMethodCommands.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\publish\C314.jsonTemplates.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\publish\C314.JsonUtils.Templates.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.Lists.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\publish\C314.SmallerCSAppsBundle.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
