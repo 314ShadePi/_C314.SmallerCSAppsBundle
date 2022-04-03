@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.SmallerCSAppsBundle.Lists", "C314.SmallerCSAppsBundle.Lists\C314.SmallerCSAppsBundle.Lists.csproj", "{890572C8-4804-4132-8DAB-617CEFFE8BCF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C314.jsonTemplates", "jsonTemplates\C314.jsonTemplates\C314.jsonTemplates\C314.jsonTemplates.csproj", "{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,18 +83,6 @@ Global
 		{890572C8-4804-4132-8DAB-617CEFFE8BCF}.Release|x64.Build.0 = Release|Any CPU
 		{890572C8-4804-4132-8DAB-617CEFFE8BCF}.Release|x86.ActiveCfg = Release|Any CPU
 		{890572C8-4804-4132-8DAB-617CEFFE8BCF}.Release|x86.Build.0 = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|x64.Build.0 = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Debug|x86.Build.0 = Debug|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|x64.ActiveCfg = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|x64.Build.0 = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|x86.ActiveCfg = Release|Any CPU
-		{CDCF6DE6-A2DC-4645-BA2C-4E494F7C19E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

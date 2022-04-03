@@ -14,7 +14,7 @@ namespace C314.SmallerCSAppsBundle.Lists
     {
         [Option('n', "name", Required = true, HelpText = "The name of the list.")]
         public string Name { get; set; }
-        
+
         public void HandleInput()
         {
             string fileName = $"{Name.Replace(' ', '_')}.json";
@@ -28,10 +28,14 @@ namespace C314.SmallerCSAppsBundle.Lists
             }
             var json = File.ReadAllText(path);
             CList list = JsonConvert.DeserializeObject<CList>(json);
-            Console.WriteLine($"List {Name} contains {list.items.Count} items.");
-            foreach (var item in list.items)
+            Console.WriteLine($"List {Name}");
+            foreach (var board in list.boards)
             {
-                Console.WriteLine($"{item.name} - {item.description}");
+                Console.WriteLine($"\tBoard {board.name} - {board.description}");
+                foreach (var item in board.items)
+                {
+                    Console.WriteLine($"\t\t{item.name}:\n\t\t\t{item.description}");
+                }
             }
         }
     }
