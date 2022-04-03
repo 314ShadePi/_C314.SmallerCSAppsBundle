@@ -14,29 +14,26 @@ namespace C314.SmallerCSAppsBundle.Lists
         [Option('n', "name", Required = true, HelpText = "The name of the list.")]
         public string Name { get; set; }
         
-        [Option('i', "item", Required = false, HelpText = "The name of the item.")]
+        [Option('i', "item", Required = false, HelpText = "The name of the item. If not specified, the current board will be updated instead.")]
         public string Item { get; set; }
 
-        [Option('d', "description", Required = false, HelpText = "The description of the item.")]
+        [Option('d', "description", Required = false, HelpText = "The description of the item/board.")]
         public string Description { get; set; }
 
-        [Option('u', "updateName", Required = false, HelpText = "The item's new name.")]
+        [Option('u', "updateName", Required = false, HelpText = "The item/board's new name.")]
         public string NewName { get; set; }
 
-        [Option('a', "add", Required = false, HelpText = "Add an item to the list.")]
+        [Option('a', "add", Required = false, HelpText = "Add an item/board to the list.")]
         public bool Add { get; set; }
 
-        [Option('e', "edit", Required = false, HelpText = "Edit an item in the list.")]
+        [Option('e', "edit", Required = false, HelpText = "Edit an item/board in the list/board.")]
         public bool Edit { get; set; }
         
-        [Option('r', "remove", Required = false, HelpText = "Remove an item from the list.")]
+        [Option('r', "remove", Required = false, HelpText = "Remove an item/board from the list/board.")]
         public bool Delete { get; set; }
 
-        [Option('b', "board", Required = true, HelpText = "The board to add the item to.")]
+        [Option('b', "board", Required = true, HelpText = "The board to edit.")]
         public string Board { get; set; }
-
-        [Option('q', "aboards", Required = false, HelpText = "Is about boards.")]
-        public bool ABoards { get; set; }
 
         public void HandleInput()
         {
@@ -54,7 +51,7 @@ namespace C314.SmallerCSAppsBundle.Lists
 
             if (Add)
             {
-                if (ABoards)
+                if (String.IsNullOrEmpty(Item))
                 {
                     if (list.boards.Any(x => x.name == Board))
                     {
@@ -87,7 +84,7 @@ namespace C314.SmallerCSAppsBundle.Lists
 
             if (Edit)
             {
-                if (ABoards)
+                if (String.IsNullOrEmpty(Item))
                 {
                     for (int i = 0; i < list.boards.Count; i++)
                     {
@@ -138,7 +135,7 @@ namespace C314.SmallerCSAppsBundle.Lists
 
             if (Delete)
             {
-                if (ABoards)
+                if (String.IsNullOrEmpty(Item))
                 {
                     for (int i = 0; i < list.boards.Count; i++)
                     {
