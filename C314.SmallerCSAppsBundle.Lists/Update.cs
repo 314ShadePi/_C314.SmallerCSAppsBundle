@@ -32,7 +32,7 @@ namespace C314.SmallerCSAppsBundle.Lists
         [Option('r', "remove", Required = false, HelpText = "Remove an item from the list.")]
         public bool Delete { get; set; }
 
-        [Option('b', "board", Required = false, HelpText = "The board to add the item to.")]
+        [Option('b', "board", Required = true, HelpText = "The board to add the item to.")]
         public string Board { get; set; }
 
         [Option('q', "aboards", Required = false, HelpText = "Is about boards.")]
