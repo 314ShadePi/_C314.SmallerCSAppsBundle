@@ -1,12 +1,6 @@
-﻿using C314.jsonTemplates;
+﻿using C314.JsonUtils.Templates;
 using CommandLine;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace C314.SmallerCSAppsBundle.Lists
 {
     [Verb("createlist", HelpText = "Create a new empty list.")]

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="C314.JsonUtils.Templates" Version="1.0.0" />
+    <PackageReference Include="C314.JsonUtils.Templates" Version="2.0.0" />
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
