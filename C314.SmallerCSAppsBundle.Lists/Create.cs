@@ -25,6 +25,7 @@ namespace C314.SmallerCSAppsBundle.Lists
         {
             CList list = new CList
             {
+                name = Name,
                 boards = new List<Board>
                 {
                     new Board

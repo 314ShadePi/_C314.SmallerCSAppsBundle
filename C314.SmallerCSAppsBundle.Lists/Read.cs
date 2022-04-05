@@ -23,15 +23,7 @@ namespace C314.SmallerCSAppsBundle.Lists
             }
             var json = File.ReadAllText(path);
             CList list = JsonConvert.DeserializeObject<CList>(json);
-            Console.WriteLine($"List {Name}");
-            foreach (var board in list.boards)
-            {
-                Console.WriteLine($"\tBoard {board.name} - {board.description}");
-                foreach (var item in board.items)
-                {
-                    Console.WriteLine($"\t\t{item.name}:\n\t\t\t{item.description}");
-                }
-            }
+            list.PrettyPrint();
         }
     }
 }
