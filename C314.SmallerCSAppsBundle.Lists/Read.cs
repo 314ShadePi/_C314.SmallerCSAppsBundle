@@ -24,7 +24,7 @@ namespace C314.SmallerCSAppsBundle.Lists
                     var _path = Path.Combine(_dir, _fileName);
                     if (!File.Exists(_path))
                     {
-                        Console.WriteLine($"List {_name} does not exist.");
+                        Console.WriteLine($"List {name} does not exist.");
                         return;
                     }
                     var _json = File.ReadAllText(_path);
@@ -41,7 +41,7 @@ namespace C314.SmallerCSAppsBundle.Lists
             var path = Path.Combine(dir, fileName);
             if (!File.Exists(path))
             {
-                Console.WriteLine($"List {_name} does not exist.");
+                Console.WriteLine($"List {_name[0]} does not exist.");
                 return;
             }
             var json = File.ReadAllText(path);
