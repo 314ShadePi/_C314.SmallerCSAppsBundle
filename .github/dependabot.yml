@@ -14,5 +14,13 @@ updates:
       include: "scope"
     pull-request-branch-name:
       separator: "-"
-    
-    
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every weekday
+      interval: "daily"
+    commit-message:
+      prefix: "github-actions: "
+      include: "scope"
+    pull-request-branch-name:
+      separator: "-"
