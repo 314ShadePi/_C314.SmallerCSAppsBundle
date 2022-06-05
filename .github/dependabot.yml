@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "nuget: "
+      prefix: "nuget:"
       include: "scope"
     pull-request-branch-name:
       separator: "-"
@@ -20,7 +20,7 @@ updates:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
     commit-message:
-      prefix: "github-actions: "
+      prefix: "github-actions:"
       include: "scope"
     pull-request-branch-name:
       separator: "-"
